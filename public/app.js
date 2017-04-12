@@ -20,6 +20,7 @@ var display = function(albums){
   var ul = document.querySelector("#album-list");
   console.log(albums.albums.items[0].name)
   console.log(albums.albums.items[1].name)
+  console.log(albums.albums.items[0].id)
   albums.albums.items.forEach(function(album){
       var li = document.createElement('li');
       var img = document.createElement('img');
@@ -28,9 +29,6 @@ var display = function(albums){
       img.width = 300
       ul.appendChild(li);
       ul.appendChild(img);
-
-      
-
       })
   }
 
