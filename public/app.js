@@ -17,7 +17,16 @@ var makeRequest = function(url, callback){
 }
 
 var display = function(albums){
-  
+  var ul = document.querySelector("#album-list");
+  console.log(albums.albums.items[0].name)
+  console.log(albums.albums.items[1].name)
+  for(var i = 0; i < albums.albums.items.length; i++){
+    var li = document.createElement('li');
+    li.innerText = albums.albums.items[i].name;
+    ul.appendChild(li);
+
+  }
+
 }
 
 window.onload = app;
